@@ -5,29 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lottie Animation Fullscreen</title>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <style>
-    html, body {
-      margin: 0; 
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      background: transparent;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* ensure body fills viewport height */
-      width: 100vw;  /* ensure body fills viewport width */
-    }
-    lottie-player {
-      width: 100vw !important;  /* full viewport width */
-      height: 100vh !important; /* full viewport height */
-      max-width: 100vw;
-      max-height: 100vh;
-      display: block;
-    }
-  </style>
+<style>
+  html, body {
+    margin: 0; 
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  lottie-player {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex !important;           /* make it flex container */
+    justify-content: center !important; /* center horizontally */
+    align-items: center !important;     /* center vertically */
+  }
+</style>
+
 </head>
 <body>
   <lottie-player
