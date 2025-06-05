@@ -2,25 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lottie Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lottie Animation Fullscreen</title>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <style>
-    body, html {
-  margin: 0; padding: 0; height: 100%; width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-}
+    html, body {
+      margin: 0; 
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: transparent;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* ensure body fills viewport height */
+      width: 100vw;  /* ensure body fills viewport width */
+    }
+    lottie-player {
+      width: 100vw !important;  /* full viewport width */
+      height: 100vh !important; /* full viewport height */
+      max-width: 100vw;
+      max-height: 100vh;
+      display: block;
+    }
   </style>
 </head>
 <body>
   <lottie-player
-    src="https://raw.githubusercontent.com/megann119/reframedegreeshow/main/reframe%20animation.json"
+    src="https://https://raw.githubusercontent.com/megann119/reframedegreeshow/main/reframe%20animation.json"
     background="transparent"
     speed="1"
-    style="width: 100%; height: 100%;"
     loop
     autoplay>
   </lottie-player>
